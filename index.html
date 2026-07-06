@@ -1,15 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>QR Code Documents</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gwagwalada Area Council - Document Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .header {
+      background: #006600;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .header p {
+      margin: 5px 0 0 0;
+      font-size: 14px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .btn {
+      display: block;
+      background: #006600;
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #004d00;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-  <h1>My Department Files</h1>
-  <ul>
-    <li><a href="administration.html">Administration</a></li>
-    <li><a href="department.html">Department</a></li>
-    <li><a href="finance.html">Finance</a></li>
-    <li><a href="works.html">Works</a></li>
-  </ul>
+  <div class="container">
+    <div class="header">
+      <h1>GWAGWALADA AREA COUNCIL</h1>
+      <p>FCT, Abuja | Official Document Access Portal</p>
+    </div>
+
+    <h2>Select Department</h2>
+    <p>Scan QR or Click to Access Documents</p>
+
+    <a href="administration.html" class="btn">📁 ADMINISTRATION</a>
+    <a href="department.html" class="btn">🏢 DEPARTMENT</a>
+    <a href="finance.html" class="btn">💰 FINANCE</a>
+    <a href="works.html" class="btn">🏗️ WORKS</a>
+
+    <div class="footer">
+      <p>© 2026 Gwagwalada Area Council. All Rights Reserved.</p>
+      <p>This portal is hosted permanently for public access.</p>
+    </div>
+  </div>
 </body>
 </html>
