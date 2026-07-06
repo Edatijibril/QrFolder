@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OFFICE OF THE HEAD OF FINANCE &amp; ACCOUNT - Gwagwalada Area Council</title>
+<style>
+  :root {
+    --green: #008751;
+    --red: #d21f1f;
+    --dark: #14251f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--dark);
+    height: 100vh;
+    overflow: hidden;
+  }
+  #overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 20, 15, 0.96);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 20px;
+  }
+  #box {
+    background: #fff;
+    border: 6px solid var(--green);
+    border-radius: 14px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px 28px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  }
+  #box h1 {
+    color: var(--red);
+    font-size: 26px;
+    letter-spacing: 1px;
+    margin: 0 0 10px;
+  }
+  #box p {
+    color: var(--dark);
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  #box .notice {
+    background: #f4f4f4;
+    border-left: 4px solid var(--green);
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 13.5px;
+    margin: 18px 0;
+    border-radius: 4px;
+  }
+  #okBtn {
+    background: var(--green);
+    color: #fff;
+    border: none;
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  #okBtn:hover { background: #006b40; }
+  #viewer {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div id="overlay">
+  <div id="box">
+    <h1>&#9888; NO TRESPASS</h1>
+    <p><strong>THIS DOCUMENT BELONGS TO<br>GWAGWALADA AREA COUNCIL, FCT ABUJA</strong></p>
+    <p>OFFICE OF THE HEAD OF FINANCE &amp; ACCOUNT</p>
+    <div class="notice">
+      This document is the property of Gwagwalada Area Council and is issued for official
+      use only. It must not be forged, altered, duplicated, or reproduced without authorization.
+      Unauthorized use is punishable under applicable law.
+    </div>
+    <button id="okBtn">OK, VIEW DOCUMENT</button>
+  </div>
+</div>
+
+<iframe id="viewer" src="finance.pdf"></iframe>
+
+<script>
+  document.getElementById('okBtn').addEventListener('click', function () {
+    document.getElementById('overlay').style.display = 'none';
+    var v = document.getElementById('viewer');
+    v.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
