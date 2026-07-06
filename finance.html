@@ -100,8 +100,17 @@
 <script>
   document.getElementById('okBtn').addEventListener('click', function () {
     document.getElementById('overlay').style.display = 'none';
-    var v = document.getElementById('viewer');
-    v.style.display = 'block';
+
+    var isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // On mobile, navigate the whole page to the PDF so it opens
+      // in the phone's native PDF viewer instead of downloading.
+      window.location.href = "finance.pdf";
+    } else {
+      var v = document.getElementById('viewer');
+      v.style.display = 'block';
+    }
   });
 </script>
 
